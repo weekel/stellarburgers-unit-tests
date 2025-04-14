@@ -12,9 +12,6 @@ public class IngredientTests {
     private final IngredientType expectedIngType = IngredientType.SAUCE;
     private final String expectedName = "White Sauce";
     private final float expectedPrice = 45.34f;
-    private IngredientType actualIngType;
-    private String actualName;
-    private float actualPrice;
 
     @Before
     public void setUp() {
@@ -23,19 +20,19 @@ public class IngredientTests {
 
     @Test
     public void getTypeShouldReturnCorrectType() {
-        actualIngType = ingredient.getType();
+        IngredientType actualIngType = ingredient.getType();
         assertEquals(expectedIngType, actualIngType);
     }
 
     @Test
     public void getNameShouldReturnCorrectName() {
-        actualName = ingredient.getName();
+        String actualName = ingredient.getName();
         assertEquals(expectedName, actualName);
     }
 
     @Test
     public void getPriceShouldReturnCorrectPrice() {
-        actualPrice = ingredient.getPrice();
+        float actualPrice = ingredient.getPrice();
         assertEquals(expectedPrice, actualPrice, 0.01f);
     }
 }

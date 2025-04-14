@@ -10,8 +10,6 @@ public class BunTests {
     private Bun bun;
     private final String expectedName = "Test Bun";
     private final float expectedPrice = 123.4f;
-    private String actualName;
-    private float actualPrice;
 
     @Before
     public void setUp() {
@@ -20,13 +18,13 @@ public class BunTests {
 
     @Test
     public void getNameShouldReturnCorrectName() {
-        actualName = bun.getName();
+        String actualName = bun.getName();
         assertEquals(expectedName, actualName);
     }
 
     @Test
     public void getPriceShouldReturnCorrectPrice() {
-        actualPrice = bun.getPrice();
+        float actualPrice = bun.getPrice();
         assertEquals(expectedPrice, actualPrice, 0.01f);
     }
 }
