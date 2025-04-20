@@ -18,7 +18,6 @@ public class BurgerTests {
     public static class BurgerNonParameterizedTests {
         private Burger burger;
 
-
         @Mock
         private Bun mockBun;
 
@@ -72,14 +71,21 @@ public class BurgerTests {
         }
 
         @Test
-        public void moveIngredientShouldChangeIngredientPosition() {
+        public void moveIngredientShouldMoveFirstIngredientToSecondPosition() {
             burger.moveIngredient(0, 1);
 
             Ingredient firstIngredient = burger.ingredients.get(0);
+
+            assertEquals("Ингредиент на позиции 0 не соответствует ожидаемому", mockIngredient2, firstIngredient);
+        }
+
+        @Test
+        public void moveIngredientShouldMoveSecondIngredientToFirstPosition() {
+            burger.moveIngredient(0, 1);
+
             Ingredient secondIngredient = burger.ingredients.get(1);
 
             assertEquals("Ингредиент на позиции 1 не соответствует ожидаемому",mockIngredient1, secondIngredient);
-            assertEquals("Ингредиент на позиции 0 не соответствует ожидаемому", mockIngredient2, firstIngredient);
         }
 
 
