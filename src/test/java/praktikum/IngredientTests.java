@@ -21,18 +21,18 @@ public class IngredientTests {
     @Test
     public void getTypeShouldReturnCorrectType() {
         IngredientType actualIngType = ingredient.getType();
-        assertEquals(expectedIngType, actualIngType);
+        assertEquals("Тип ингредиента не совпадает с ожидаемым", expectedIngType, actualIngType);
     }
 
     @Test
     public void getNameShouldReturnCorrectName() {
         String actualName = ingredient.getName();
-        assertEquals(expectedName, actualName);
+        assertEquals("Название ингредиента не совпадает с ожидаемым", expectedName, actualName);
     }
 
     @Test
     public void getPriceShouldReturnCorrectPrice() {
         float actualPrice = ingredient.getPrice();
-        assertEquals(expectedPrice, actualPrice, 0.01f);
+        assertEquals("Цена ингредиента не совпадает с ожидаемой", expectedPrice, actualPrice, 0.01f);
     }
 }

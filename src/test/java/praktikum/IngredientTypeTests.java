@@ -12,21 +12,21 @@ public class IngredientTypeTests {
 
     @Test
     public void enumShouldContainSauce() {
-        assertNotNull(IngredientType.valueOf(SAUCE_NAME));
+        assertNotNull("Тип SAUCE не найден в перечислении IngredientType", IngredientType.valueOf(SAUCE_NAME));
     }
 
     @Test
     public void enumShouldContainFilling() {
-        assertNotNull(IngredientType.valueOf(FILLING_NAME));
+        assertNotNull("Тип FILLING не найден в перечислении IngredientType", IngredientType.valueOf(FILLING_NAME));
     }
 
     @Test
     public void sauceToStringShouldReturnCorrectName() {
-        assertEquals(SAUCE_NAME, IngredientType.SAUCE.toString());
+        assertEquals("Строковое представление SAUCE некорректно", SAUCE_NAME, IngredientType.SAUCE.toString());
     }
 
     @Test
     public void fillingToStringShouldReturnCorrectName() {
-        assertEquals(FILLING_NAME, IngredientType.FILLING.toString());
+        assertEquals("Строковое представление FILLING некорректно", FILLING_NAME, IngredientType.FILLING.toString());
     }
 }

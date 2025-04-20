@@ -19,12 +19,12 @@ public class BunTests {
     @Test
     public void getNameShouldReturnCorrectName() {
         String actualName = bun.getName();
-        assertEquals(expectedName, actualName);
+        assertEquals("Ожидалось другое имя булки", expectedName, actualName);
     }
 
     @Test
     public void getPriceShouldReturnCorrectPrice() {
         float actualPrice = bun.getPrice();
-        assertEquals(expectedPrice, actualPrice, 0.01f);
+        assertEquals("Ожидалась другая цена булки", expectedPrice, actualPrice, 0.01f);
     }
 }
